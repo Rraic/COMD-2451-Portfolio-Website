@@ -1,23 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Portfolio</title>
-    <link href="css/style.css" rel="stylesheet"
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ricky Yin - Portfolio</title>
+        <link href="css/style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="css/my-styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    </head>
+    
+        <!-- head/nav bar-->
+        
+        <div class="w3-top">
+            <div class="w3-bar w3-black w3-padding w3-card" style="letter-spacing:3px;">
+              <a href="#home" class="w3-bar-item w3-button">Ricky Yin - Portfolio</a>
+              <div class="w3-right w3-hide-small">
+                <a href="#about" class="w3-bar-item w3-button">About</a>
+                <a href="#gallery" class="w3-bar-item w3-button">Gallery</a>
+                <li><a href="resume.html">Resume</a></li>
+                <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+              </div>
+            </div>
+          </div>
+          </head>
+          <br>
+          <br>
 <body>
-<header class="w3-container w3-green">
-<h1>Ricky Yin - Portfolio </h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">gallery</a></li>
-            <li><a href="services.html">services</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+  <!--Light/Dark Mode-->
+  <button class="mode-btn" id="modeBtn">Toggle Mode</button>
+
+  <script>
+      const modeBtn = document.getElementById('modeBtn');
+      const body = document.body;
+
+      modeBtn.addEventListener('click', () => {
+          body.classList.toggle('dark-mode');
+          const currentMode = body.classList.contains('dark-mode') ? 'Dark' : 'Light';
+          modeBtn.textContent = `${currentMode} Mode`;
+      });
+  </script>
+
+        <!-- about section-->
+        <div class="w3-row w3-padding-64" id="about">
+            <div class="w3-col m3 w3-padding-large"></div> <!-- Adjust the width of this column as needed -->
+        
+            <div class="w3-col m6 w3-padding-large w3-center">
+                <h1 class="top_text">About Me</h1>
+                <h5>Born in July 18, 2003</h5>
+                <p class="w3-large">I am currently studying in City Tech - New York City College of Technology and majoring in Communication Design hoping to learn and gain meaningful experience.</p>
+            </div>
+        
+            <div class="w3-col m3 w3-padding-large"></div> <!-- Adjust the width of this column as needed -->
+        </div>
+        
+                      <!-- gallery section-->
+                      <div class="w3-row w3-padding-64" id="gallery">
+                        <section>
+                            <div class="container">
+                                <h1 class="top_text">Gallery</h1>
+                                <p style="text-align: center;">For more, <a href="https://drive.google.com/drive/folders/1aI35WO836hO3exftUsgVig2AsKLON5nk?usp=sharing" target="_blank">click here.</a></p>
+                                <div class="gallery">
+                                    <div class="portfolio-item">
+                                        <img src="assets/Initials_Brand-300dpi.jpg" class="colmedia">
+                                        <div class="caption">
+                                            <h3>Initials Brand</h3>
+                                            <p>My Initials as a Brand.</p>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-item">
+                                        <img src="assets/AD_Reel_Instagram.png" class="colmedia">
+                                        <div class="caption">
+                                            <h3>Social Media AD</h3>
+                                            <p>A Social Media AD Campaign</p>
+                                        </div>
+                                    </div>
+                                    <!-- Add more items as needed -->
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    
+
+
+                <!-- Footer With Contact-->
+              
+<footer>
+  <div class="w3-row w3-padding-64" id="contact">
+                <div class="fcf-body">
+
+                  <div id="fcf-form">
+                  <h3 class="fcf-h3">Contact </h3>
+              
+                  <form id="fcf-form-id" class="fcf-form-class" method="post" action="https://formsubmit.co/08a83db0ac3c97fd66da76cb9ed9b25d">
+                      
+                      <div class="fcf-form-group">
+                          <label for="Name" class="fcf-label">Your name</label>
+                          <div class="fcf-input-group">
+                              <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                          </div>
+                      </div>
+              
+                      <div class="fcf-form-group">
+                          <label for="Email" class="fcf-label">Your email address</label>
+                          <div class="fcf-input-group">
+                              <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                          </div>
+                      </div>
+              
+                      <div class="fcf-form-group">
+                          <label for="Message" class="fcf-label">Your message</label>
+                          <div class="fcf-input-group">
+                              <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                          </div>
+                      </div>
+              
+                      <div class="fcf-form-group">
+                          <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+                      </div>
+              
+                      <div class="fcf-credit" id="fcf-credit">
+                      Simple HTML email form provided by <a href="https://www.majesticform.com" target="_blank">MajesticForm</a>
+                      </div>
+              
+                  </form>
+                  </div>
+              
+              </div>
+  </div>
+                </footer>
 </body>
 </html>

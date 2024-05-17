@@ -158,6 +158,239 @@ label.fcf-label {
     margin-top: 0.5rem;
 }
 
-input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[type="button"].fcf-btn-block {
-    width: 100%;
+
+        body {
+            transition: background-color 0.3s ease;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Dark/Light Mode
+
+        .mode-btn {
+            position: fixed;
+            top: 10px;
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+            z-index: 9999;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .mode-btn:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Define dark mode styles */
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .colmedia {
+            display: block; 
+            width: 15%;
+            border: 5px solid #000000;
+            transition: box-shadow 0.3s;
+            box-sizing: border-box; 
+            height: auto;
+            margin-bottom: 2px; 
+          }
+          
+          .portfolio-item {
+            position: relative;
+          }
+          
+          .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7); 
+            color: white;
+            padding: 10px;
+            opacity: 0; 
+            transition: opacity 0.3s ease; 
+          }
+          
+          .portfolio-item:hover .caption {
+            opacity: 1; 
+          }
+          
+
+
+          .top_text {
+            font-size: 60px;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            color: #000000;
+            font-weight: bolder;
+            text-decoration: underline;
+            text-decoration-color: #fe5000;
+            text-underline-offset: 20px;
+            border-radius: 25px;
+          }
+
+          .center-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center; /* Optional: centers text inside the div */
+        }
+        
+        /* Centering the gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust gap as needed */
+    padding: 0 20px; /* Optional: add padding to the sides */
 }
+
+.portfolio-item {
+    flex: 1 1 300px; /* Base size for items */
+    max-width: 300px; /* Ensure items don't exceed a certain width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px; /* Add padding inside each item */
+    margin: 10px; /* Add margin outside each item for spacing */
+    border: 1px solid #ccc; /* Optional: add border for better visual separation */
+    border-radius: 8px; /* Optional: round the corners */
+    background-color: #fff; /* Optional: add background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add subtle shadow */
+}
+
+.colmedia {
+    width: 100%; /* Ensure the image takes the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border: 5px solid #000000;
+    transition: box-shadow 0.3s;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Space between image and caption */
+}
+
+.caption {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    width: 100%; /* Ensure the caption is full width */
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .caption {
+    opacity: 1;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex: 1 1 100%; /* Full width on small screens */
+        max-width: none; /* Remove max-width on small screens */
+    }
+}
+
+/* Other global styles */
+body {
+    transition: background-color 0.3s ease;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.mode-btn {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.mode-btn:hover {
+    background-color: #0056b3;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.top_text {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #000000;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-decoration-color: #fe5000;
+    text-underline-offset: 20px;
+    border-radius: 25px;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* Apply Roboto font globally */
+body {
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease;
+    margin: 0;
+    padding: 0;
+}
+
+/* Specific elements can also use Roboto */
+h1, h2, h3, h4, h5, h6, p, a, button {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* The rest of your CSS */
+
+/* CONTACT PAGE */
+
+#fcf-form {
+    display: block;
+}
+
+.fcf-body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    padding: 30px;
+    padding-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    max-width: 100%;
+}
+
+/* Rest of your existing CSS */
