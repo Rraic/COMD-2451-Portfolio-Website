@@ -166,30 +166,28 @@ label.fcf-label {
             padding: 0;
         }
         
-        /* Dark/Light Mode
-
+        .mode-btn-container {
+            position: absolute;
+            top: 50px; /* Adjust this value to ensure it's just below the nav bar */
+            left: 10px; /* Adjust this value for the desired left alignment */
+            z-index: 9999; /* Ensure it stays above other elements */
+        }
+        
         .mode-btn {
-            position: fixed;
-            top: 10px;
-            left: 50%; /* Center horizontally */
-            transform: translateX(-50%); /* Center horizontally */
-            z-index: 9999;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
+            background-color: #fe5000;
+            color: black;
             border: none;
-            outline: none;
-            background-color: #007bff;
-            color: #fff;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 5px;
         }
         
-        .mode-btn:hover {
-            background-color: #0056b3;
+        .dark-mode .mode-btn {
+            background-color: #333;
+            color: white;
         }
         
-        /* Define dark mode styles */
+        /*  dark mode styles */
         body.dark-mode {
             background-color: #333;
             color: #fff;
@@ -247,7 +245,7 @@ label.fcf-label {
             text-align: center; /* Optional: centers text inside the div */
         }
         
-        /* Centering the gallery */
+        /* gallery */
 .gallery {
     display: flex;
     justify-content: center;
@@ -295,20 +293,11 @@ label.fcf-label {
     opacity: 1;
 }
 
-/* Media queries for responsiveness */
 @media (max-width: 768px) {
     .portfolio-item {
-        flex: 1 1 100%; /* Full width on small screens */
-        max-width: none; /* Remove max-width on small screens */
+        flex: 1 1 100%; 
+        max-width: none; 
     }
-}
-
-/* Other global styles */
-body {
-    transition: background-color 0.3s ease;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 .mode-btn {
@@ -337,18 +326,7 @@ body.dark-mode {
     color: #fff;
 }
 
-.top_text {
-    font-size: 60px;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    color: #000000;
-    font-weight: bolder;
-    text-decoration: underline;
-    text-decoration-color: #fe5000;
-    text-underline-offset: 20px;
-    border-radius: 25px;
-}
+
 
 .center-content {
     display: flex;
@@ -356,7 +334,7 @@ body.dark-mode {
     align-items: center;
     text-align: center;
 }
-/* Apply Roboto font globally */
+
 body {
     font-family: 'Roboto', sans-serif;
     transition: background-color 0.3s ease;
@@ -364,33 +342,26 @@ body {
     padding: 0;
 }
 
-/* Specific elements can also use Roboto */
 h1, h2, h3, h4, h5, h6, p, a, button {
     font-family: 'Roboto', sans-serif;
 }
 
-/* The rest of your CSS */
-
-/* CONTACT PAGE */
-
-#fcf-form {
-    display: block;
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
 }
 
-.fcf-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    background-color: #fff;
-    padding: 30px;
-    padding-bottom: 10px;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    max-width: 100%;
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode a {
+    color: #fff;
 }
 
-/* Rest of your existing CSS */
+body.dark-mode .top_text {
+    color: #fff;
+}
